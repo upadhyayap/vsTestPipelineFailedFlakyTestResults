@@ -10,22 +10,9 @@ jobs:
 - job: RunTest1
   displayName: 'Run Tests'
   pool: Default
-  strategy:
-    parallel: 2
   steps:
-  - task: VisualStudioTestPlatformInstaller@1
-    displayName: 'Visual Studio Test Platform Installer'
-    inputs:
-      versionSelector: 'latestPreRelease'
   - task: VSTest@2
+    displayName: 'VsTest - testAssemblies'
     inputs:
-      testSelector: 'testAssemblies'
-      testAssemblyVer2: '**/*vsTestTaskL2ForRerun*.dll'
-      searchFolder: '$(System.DefaultWorkingDirectory)\MsTestProject\bin\Debug\net472'
-      batchingBasedOnAgentsOption: 'customBatchSize'
-      failOnMinTestsNotRun: true
-      minimumExpectedTests: '3' 
-      vsTestVersion: 'toolsInstaller'
       rerunFailedTests: true
-      rerunMaxAttempts: '3'
-      rerunFailedThreshold: '100'
+      rerunFailedThreshold: '90'
