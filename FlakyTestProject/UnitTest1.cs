@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FlakyTestProject
 {
@@ -11,7 +11,7 @@ namespace FlakyTestProject
         [Priority(0)]
         public void TestMethod1()
         {
-            Assert.IsTrue(_value %2 == 0);
+            Assert.IsTrue(_value % 2 == 0);
             _value++;
         }
 
@@ -19,7 +19,7 @@ namespace FlakyTestProject
         [Priority(0)]
         public void TestMethod2()
         {
-            Assert.IsTrue(_value %2 == 0);
+            Assert.IsTrue(_value % 2 == 0);
             _value++;
         }
 
@@ -27,7 +27,7 @@ namespace FlakyTestProject
         [Priority(0)]
         public void TestMethod3()
         {
-            Assert.IsTrue(_value %2 == 0);
+            Assert.IsTrue(_value % 2 == 0);
             _value++;
         }
 
@@ -35,7 +35,7 @@ namespace FlakyTestProject
         [Priority(0)]
         public void TestMethod4()
         {
-            Assert.IsTrue(_value %2 == 0);
+            Assert.IsTrue(_value % 2 == 0);
             _value++;
         }
 
