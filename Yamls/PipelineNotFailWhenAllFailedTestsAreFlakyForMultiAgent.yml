@@ -13,12 +13,13 @@ jobs:
   strategy:
     parallel: 2
   steps:
+  - task: VisualStudioTestPlatformInstaller@1
+    displayName: 'Visual Studio Test Platform Installer'
+    inputs:
+      versionSelector: 'latestPreRelease'
   - task: VSTest@2
     displayName: 'VsTest - testAssemblies'
     inputs:
       rerunFailedTests: true
       rerunFailedThreshold: '90'
-  - task: VisualStudioTestPlatformInstaller@1
-    displayName: 'Visual Studio Test Platform Installer'
-    inputs:
-      versionSelector: 'latestPreRelease'
+      vsTestVersion: 'toolsInstaller'
