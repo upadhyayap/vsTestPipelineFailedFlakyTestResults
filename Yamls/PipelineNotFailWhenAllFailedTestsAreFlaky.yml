@@ -21,3 +21,6 @@ jobs:
       rerunFailedTests: true
       rerunFailedThreshold: '90'
       vsTestVersion: 'toolsInstaller'
+      platform: x64
+      configuration: '.NETCoreApp,Version=v3.1'
+      runSettingsFile: Flakyl2.runsettings
